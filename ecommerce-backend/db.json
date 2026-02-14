@@ -1,0 +1,100 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "title": "men",
+      "prefix": "men",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/cfb357649428__hp-w12-22032022-h_m-men.jpg"
+    },
+    {
+      "id": "2",
+      "title": "women",
+      "prefix": "women",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/30d354267a09b__hp-w12-22032022-h_m-women_dresses.jpg"
+    },
+    {
+      "id": "3",
+      "title": "kids",
+      "prefix": "kids",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/37d243d334c63__hp-w12-22032022-h_m-kids1.jpg"
+    },
+    {
+      "id": "4",
+      "title": "baby",
+      "prefix": "baby",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/28948d47ae6e8__h_m-w39-28092022-4066c-1x1.jpg"
+    },
+    {
+      "id": "5",
+      "title": "sport",
+      "prefix": "sport",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/1dda9ae79a671__h_m-w40-06102022-7416b-1x1.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Jersey top",
+      "price": "249.00",
+      "cat_prefix": "men",
+      "img": "https://plus.unsplash.com/premium_photo-1672239496290-5061cfee7ebb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVufGVufDB8fDB8fHww",
+      "max": 4
+    },
+    {
+      "id": 2,
+      "title": "Regular Fit Jersey top",
+      "price": "229.00",
+      "cat_prefix": "men",
+      "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWVufGVufDB8fDB8fHww",
+      "max": 4
+    },
+    {
+      "id": 3,
+      "title": "Cotton polo shirt",
+      "price": "200.00",
+      "cat_prefix": "men",
+      "img": "https://plus.unsplash.com/premium_photo-1664015982598-283bcdc9cae8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWVufGVufDB8fDB8fHww",
+      "max": 3
+    },
+    {
+      "id": 4,
+      "title": "Cotton t-shirt",
+      "price": "100.00",
+      "cat_prefix": "women",
+      "img": "https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29tZW58ZW58MHx8MHx8fDA%3D",
+      "max": 2
+    },
+    {
+      "id": 5,
+      "title": "Sweatshirt shorts",
+      "price": "300.00",
+      "cat_prefix": "women",
+      "img": "https://plus.unsplash.com/premium_photo-1679440415182-c362deb2fd40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29tZW58ZW58MHx8MHx8fDA%3D",
+      "max": 3
+    },
+    {
+      "id": 6,
+      "title": "Velour top",
+      "price": "300.00",
+      "cat_prefix": "kids",
+      "img": "https://plus.unsplash.com/premium_photo-1686920245950-58617c8a602e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2lkc3xlbnwwfHwwfHx8MA%3D%3D",
+      "max": 2
+    },
+    {
+      "id": 9,
+      "title": "Pile all-in-one suit with ears",
+      "price": "500.00",
+      "cat_prefix": "baby",
+      "img": "https://plus.unsplash.com/premium_photo-1667480556784-a8f27e62104c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmFieXxlbnwwfHwwfHx8MA%3D%3D",
+      "max": 2
+    },
+    {
+      "id": 17,
+      "title": "Regular Fit football shirt",
+      "price": "449.00",
+      "cat_prefix": "sport",
+      "img": "https://plus.unsplash.com/premium_photo-1664303119944-4cf5302bb701?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c3BvcnR8ZW58MHx8MHx8fDA%3D",
+      "max": 2
+    }
+  ]
+}
