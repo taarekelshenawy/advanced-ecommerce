@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
 import { HeaderBasket } from '@components/ecommerce/HeaderBasket';
 
 const {headerContainer,headerLogo}=styles;
@@ -22,12 +23,12 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
+                    <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                    <Nav.Link as={NavLink} to="/">Link</Nav.Link>
                 </Nav>
                    <Nav>
-                    <Nav.Link href="#home">Login</Nav.Link>
-                    <Nav.Link href="#link">Register</Nav.Link>
+                    <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
+                    <Nav.Link as={NavLink} to="/register">Register</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
