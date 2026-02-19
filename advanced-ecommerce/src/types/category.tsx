@@ -1,1 +1,1 @@
-export type TCategory={title:string,prefix:string,id:string,img:string};
+export type TCategory={title:string,prefix:string,id:number,img:string};

@@ -1,10 +1,12 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row} from "react-bootstrap";
 import Product from "@components/ecommerce/Product/Product";
 import { useAppDispatch,useAppSelector } from "@store/hooks";
 import { useEffect } from "react";
 import actGetproductsbyPrefix from "@store/products/act/actGetproductsbyPrefix";
 import { useParams } from "react-router-dom";
 import { ProductCleanUp } from "@store/products/productsSlice";
+import Loading from "@components/feedback/Loading";
+import GridList from "@components/common/GridList/GridList";
 
 
 
@@ -13,7 +15,7 @@ const Products = () => {
 
 
   const dispatch= useAppDispatch();
-  const {records}=useAppSelector(state=>state.products);
+  const {loading,error,records}=useAppSelector(state=>state.products);
 
 
   useEffect(()=>{
@@ -29,18 +31,16 @@ const Products = () => {
   
   },[dispatch,prefix])
 
-  const productsList = records.map((record)=>{
-    return (
-        <Col xs={6} md={3} className="d-flex justify-content-center mb-5 mt-2">
-          <Product key={record.id} {...record}/>
-        </Col>)
-  })
+ 
   return (
     <Container>
-      <Row>
-        {productsList}
-    
-      </Row>
+      <Loading loading={loading} error={error}>
+           <Row>
+             <GridList records={records} renderItem={(record)=><Product {...record}/>}/>
+          </Row>
+
+      </Loading>
+   
     </Container>
   );
 };
