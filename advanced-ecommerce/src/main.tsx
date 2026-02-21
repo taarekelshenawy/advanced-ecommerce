@@ -4,13 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Approuter from '@routes/Approuter/Approuter';
 import './styles/global.css';
 import { Provider } from 'react-redux';
-import store from './store/index';
+import {store,persistor} from './store/index';
+import { PersistGate } from "redux-persist/integration/react";
 
 
 
 createRoot(document.getElementById('root')!).render(
     <Provider store={store}>
-        <Approuter/>
+        <PersistGate loading={null} persistor={persistor}>
+                <Approuter/>
+        </PersistGate>
+      
      </Provider>
 
 )
