@@ -5,8 +5,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import { HeaderBasket } from '@components/ecommerce/HeaderBasket';
+import HeaderWishlist from '@components/ecommerce/HeaderWishlist/HeaderWishlist';
 
-const {headerContainer,headerLogo}=styles;
+const {headerContainer,headerLogo,headerLeftBar}=styles;
 
 export default function Header() {
   return (
@@ -15,7 +16,12 @@ export default function Header() {
             <div className={headerLogo}>
                 <h1>our<span><Badge bg="primary">Ecom</Badge></span></h1>
             </div>
-            <HeaderBasket/>
+            <div className={headerLeftBar}>
+                <HeaderWishlist/>
+                <HeaderBasket/>
+            </div>
+            
+            
         </div>
           <Navbar expand="lg" className="bg-dark" data-bs-theme="dark">
             <Container>
