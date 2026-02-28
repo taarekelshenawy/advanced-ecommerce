@@ -5,6 +5,7 @@ import actgetCategories from "@store/categories/act/actgetCategories";
 import { useEffect } from "react";
 import Loading from "@components/feedback/Loading";
 import GridList from "@components/common/GridList/GridList";
+import Heading from "@components/common/Heading/Heading";
 
 
 
@@ -22,15 +23,10 @@ const Categories = () => {
 
 
 
-  // const categoriesList = records.map((record)=>{
-  //   return (
-  //       <Col xs={6} key={record.id}  md={3} className="d-flex justify-content-center mb-5 mt-2">
-  //            <Category {...record}/>
-  //       </Col>
-  //       )
-  // })
+  
   return (
     <Container>
+      <Heading>Categories</Heading>
       <Loading loading={loading} error={error}>
             <Row>
                  <GridList records={records} renderItem={(record)=><Category {...record}/>}/>

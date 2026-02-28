@@ -6,6 +6,7 @@ import './styles/global.css';
 import { Provider } from 'react-redux';
 import {store,persistor} from './store/index';
 import { PersistGate } from "redux-persist/integration/react";
+import './services/axios-global'
 
 
 

@@ -12,6 +12,8 @@ import Products from '@pages/Products';
 import Login from '@pages/Login';
 import Register from '@pages/Register';
 import Errorpage from '@pages/Errorpage';
+import Cart from '@pages/Cart';
+import Wishlist from '@pages/wishlist';
 
 
 
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
     {
         path: "/categories",
         element: <Categories/>
+      },
+       {
+        path: "/cart",
+        element: <Cart/>
+      },
+       {
+        path: "/wishlist",
+        element: <Wishlist/>
       },
      {
         path: "/product/:prefix",
