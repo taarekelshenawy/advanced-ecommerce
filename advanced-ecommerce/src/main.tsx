@@ -1,10 +1,10 @@
 
 import { createRoot } from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Approuter from '@routes/Approuter/Approuter';
+import Approuter from '@routes/Approuter/Approuter'
 import './styles/global.css';
 import { Provider } from 'react-redux';
-import {store,persistor} from './store/index';
+import {store,persistor} from '@store';
 import { PersistGate } from "redux-persist/integration/react";
 import './services/axios-global'
 

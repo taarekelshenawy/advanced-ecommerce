@@ -1,19 +1,18 @@
-
+import { lazy, Suspense } from 'react';
 
 import { MainLayout } from '@layouts/MainLayout';
-
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from '@pages/Home';
-import Categories from '@pages/Categories';
-import Products from '@pages/Products';
-import Login from '@pages/Login';
-import Register from '@pages/Register';
-import Errorpage from '@pages/Errorpage';
-import Cart from '@pages/Cart';
-import Wishlist from '@pages/wishlist';
+const Home =lazy(()=>import('@pages/Home'));
+const Categories = lazy(()=>import("@pages/Categories"));
+const Products = lazy(() => import("@pages/Products"));
+const Login = lazy(() => import("@pages/Login"));
+const Register = lazy(() => import("@pages/Register"));
+const Errorpage = lazy(() => import("@pages/Errorpage"));
+const Cart = lazy(() => import("@pages/Cart"));
+const Wishlist = lazy(() => import("@pages/wishlist"));
 
 
 
@@ -21,23 +20,34 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout/>,
-    errorElement:<Errorpage/>,
+    errorElement:<Suspense fallback="loading please wait ...."><Errorpage/></Suspense>,
     children: [
       {
         index:true,
-        element:<Home/>
+        element:
+        <Suspense fallback="loading please wait ....">
+          <Home/>
+        </Suspense>
+     
       },
     {
         path: "/categories",
-        element: <Categories/>
+        element:
+         <Suspense fallback="loading please wait ....">
+         <Categories/>
+        </Suspense> 
       },
        {
         path: "/cart",
-        element: <Cart/>
+        element:  <Suspense fallback="loading please wait ....">
+         <Cart/>
+        </Suspense> 
       },
        {
         path: "/wishlist",
-        element: <Wishlist/>
+        element:  <Suspense fallback="loading please wait ">
+         <Wishlist/>
+        </Suspense> 
       },
      {
         path: "/product/:prefix",

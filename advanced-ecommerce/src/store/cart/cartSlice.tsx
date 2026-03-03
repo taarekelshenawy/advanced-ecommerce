@@ -1,8 +1,8 @@
 import { createSlice,createSelector } from "@reduxjs/toolkit";
-import type { TProduct } from "src/types/product";
+import type { TProduct } from "@types";
 import type { RootState } from "../index";
 import actAddtoCart from "./act/actAddtoCart";
-import type { TLoading  } from "src/types/shared";
+import type { TLoading  } from "@types";
 
 type stateProps={
     items:{[key:number]:number},
@@ -21,6 +21,9 @@ const cartSlice = createSlice({
     name:'cart',
     initialState,
     reducers:{
+        cartCleanUp:(state)=>{
+            state.productFullinfo=[];
+        },
        
         addToCart:(state,action)=>{
       
@@ -37,8 +40,9 @@ const cartSlice = createSlice({
         },
         cartItemRemove:(state,action)=>{
            delete state.items[action.payload];
-           const productsinfo = state.productFullinfo.filter((item)=>item.id !== action.payload);
-           state.productFullinfo=productsinfo
+          state.productFullinfo= state.productFullinfo.filter(
+        (el) => el.id !== action.payload
+      );
 
         }
     },
@@ -64,7 +68,7 @@ const cartSlice = createSlice({
 })
 const getCartTotalQuantitySelector=createSelector((state)=>state.cart.items,
 (items:RootState)=>{
-    console.log('function')
+   
      const totalQuantity =
     Object.values(items).reduce((acc,cur)=>acc + +cur,0);
 
@@ -75,6 +79,6 @@ const getCartTotalQuantitySelector=createSelector((state)=>state.cart.items,
 
 export {getCartTotalQuantitySelector};
 
-export const {addToCart,cartItemChangeQuantity,cartItemRemove}=cartSlice.actions;
+export const {addToCart,cartItemChangeQuantity,cartItemRemove,cartCleanUp}=cartSlice.actions;
 
 export default cartSlice.reducer;
