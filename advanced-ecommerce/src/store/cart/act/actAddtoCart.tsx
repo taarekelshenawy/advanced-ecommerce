@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import type { RootState } from "@store/index";
 import axios from "axios";
 import { isAxiosError } from "axios";
-import type { TProduct } from "src/types/product";
+import type { TProduct } from "@types";
 
 
 type TResponse=TProduct[]
@@ -12,6 +12,9 @@ const actAddtoCart = createAsyncThunk("addtoCart/cart",
         const {rejectWithValue,getState}=thunkAPI;
         const {cart} =getState() as RootState;
         const ObjectId = Object.keys(cart.items).map((el)=>`id=${el}`);
+            if (ObjectId.length === 0) {
+            return [];
+            }
         const concatenatedObjectId=ObjectId.join('&');
 
         try{

@@ -19,11 +19,14 @@
       "@hooks/*": ["src/hooks/*"],
       "@pages/*": ["src/pages/*"],
       "@routes/*": ["src/routes/*"],
+      "@store":["src/store/index"],
       "@store/*": ["src/store/*"],
       "@styles/*": ["src/styles/*"],
       "@layouts/*": ["src/Layouts/*"],
       "@util/*": ["src/util/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+       "@types": ["src/types/index"],  // علشان تعرف TS import @types مباشرة
+      "@types/*": ["src/types/*"]
     },
   
 

@@ -1,29 +1,18 @@
 import { Container, Row } from "react-bootstrap";
 import Category from "@components/ecommerce/Category/Category";
-import { useAppDispatch,useAppSelector } from "@store/hooks";
-import actgetCategories from "@store/categories/act/actgetCategories";
-import { useEffect } from "react";
 import Loading from "@components/feedback/Loading";
 import GridList from "@components/common/GridList/GridList";
 import Heading from "@components/common/Heading/Heading";
+import useCategories from "@hooks/useCategories";
 
 
 
 
 const Categories = () => {
-  const dispatch= useAppDispatch();
-  const {loading,error,records}=useAppSelector(state=>state.categories);
-
-  useEffect(()=>{
-    if(!records.length){
-    dispatch(actgetCategories())
-    }
-   
-  },[dispatch,records])
+  const {loading,error,records} =useCategories()
 
 
 
-  
   return (
     <Container>
       <Heading>Categories</Heading>

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { TLoading   } from "src/types/shared";
-import type { TProduct } from "src/types/product";
+import type { TLoading   } from "@types";
+import type { TProduct } from "@types";
 import actAddtoWishlist from "./act/actLikeToggle";
 import actGetwishlist from "./act/actGetwishlist";
 
@@ -21,7 +21,7 @@ const wishListSlice = createSlice({
     name:'wishlist',
     initialState,
     reducers:{
-          ProductCleanUp:(state)=>{
+          wishlistCleanUp:(state)=>{
             state.wishlistFullinfo=[];
         },
     },
@@ -72,7 +72,7 @@ const wishListSlice = createSlice({
  
 })
 
-export const {ProductCleanUp}=wishListSlice.actions;
+export const {wishlistCleanUp}=wishListSlice.actions;
 
 
 

@@ -1,5 +1,5 @@
 import CartItem from "../CartItem/CartItem";
-import type { TProduct } from "src/types/product";
+import type { TProduct } from "@types";
 
 
 type CartItemListProps = {

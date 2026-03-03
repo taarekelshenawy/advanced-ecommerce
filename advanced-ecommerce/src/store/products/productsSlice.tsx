@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import actGetproductsbyPrefix from "./act/actGetproductsbyPrefix";
-import type { TProduct } from "src/types/product";
-import type{ TLoading } from "src/types/shared";
+import type { TProduct } from "@types";
+import type{ TLoading } from "@types";
 
 type TproductState={
     records:TProduct[],
