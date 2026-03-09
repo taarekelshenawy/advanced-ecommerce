@@ -5,12 +5,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Errorpage from '@pages/Errorpage'
 const Home =lazy(()=>import('@pages/Home'));
 const Categories = lazy(()=>import("@pages/Categories"));
 const Products = lazy(() => import("@pages/Products"));
 const Login = lazy(() => import("@pages/Login"));
 const Register = lazy(() => import("@pages/Register"));
-const Errorpage = lazy(() => import("@pages/Errorpage"));
 const Cart = lazy(() => import("@pages/Cart"));
 const Wishlist = lazy(() => import("@pages/wishlist"));
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout/>,
-    errorElement:<Suspense fallback="loading please wait ...."><Errorpage/></Suspense>,
+    errorElement:<Errorpage/>,
     children: [
       {
         index:true,

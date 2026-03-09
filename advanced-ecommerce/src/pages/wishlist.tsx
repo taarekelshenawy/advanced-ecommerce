@@ -21,7 +21,7 @@ const Wishlist = () => {
       <Heading>Your Wishlist</Heading>
    
       {wishlistFullinfo.length === 0 ? <div>there is no products</div> :
-       <Loading loading={loading} error={error}>
+       <Loading loading={loading} error={error} type="Cartskeleton">
         <GridList<TProduct>
           records={records}
           renderItem={(record) => <Product {...record} />}
