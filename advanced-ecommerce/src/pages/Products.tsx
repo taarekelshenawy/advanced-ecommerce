@@ -15,7 +15,7 @@ const {productFullinfo,loading,error} =useProducts()
   return (
     <Container>
       <Heading>Proudcts</Heading>
-      <Loading loading={loading} error={error}>
+      <Loading loading={loading} error={error} type="Productskeleton">
            <Row>
              <GridList records={productFullinfo} renderItem={(record)=><Product {...record}/>}/>
           </Row>

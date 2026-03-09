@@ -2,6 +2,7 @@ import Heading from "@components/common/Heading/Heading";
 import CartItemList from "@components/ecommerce/CartItemList/CartItemList";
 import CartSubtotalPrice from "@components/ecommerce/Subtotal/Subtotal";
 import useCart from "@hooks/useCart";
+import Lottiefiles from '@components/feedback/LottiefilesHandler/LottiefilesHandler'
 
 
 export default function Cart() {
@@ -19,7 +20,7 @@ export default function Cart() {
             />
           </>
         ) : (
-          "Your Cart is empty"
+           <Lottiefiles type="empty" message="there is no products"/>
         )}
         <CartSubtotalPrice products={AllProducts}/>
         
